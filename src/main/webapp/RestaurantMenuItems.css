@@ -1,0 +1,131 @@
+  /* Include the updated CSS here */
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            height: 100%;
+			  margin: 0;
+			  display: flex;
+			  justify-content: center;
+			  align-items: center;
+			  background-color: #f0f0f0; /* Optional background color */
+            
+        }
+        /* Profile Container Styles */
+.profile-container {
+    max-width: 500px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7px);
+    background-color: white; /* Set a white background for better contrast */
+    margin: auto; /* Automatically center it */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header Styles */
+.profile-container h2 {
+    margin-top: 0;
+    font-size: 30px;
+    font-weight: bold;
+    color: #8a2608; /* Swiggy orange */
+    text-align: center;
+}
+
+/* Detail Item Styles */
+.detail-item {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    width: 100%; /* Ensure full width for input fields */
+}
+
+.detail-item label {
+    display: inline-block;
+    width: 150px;
+    font-weight: 700;
+    color: #3f3f3f;
+}
+
+.detail-item input[type="text"],.detail-item input[type="password"], .detail-item input[type="number"], .detail-item select, .detail-item textarea{
+    width: calc(100% - 160px);
+    padding: 12px;
+    font-weight: 700;
+    border: 1px solid rgba(0, 0, 0, 0.5); /* Semi-transparent border */
+    background-color: transparent; /* Transparent background */
+    color: #050000; /* Text color */
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+.detail-item input[type="password"] {
+	
+	width: calc(100% - 230px);
+}
+.detail-item input:focus, .detail-item select:focus, .detail-item textarea:focus {
+    border-color: #343333; /* Swiggy orange on focus */
+    outline: none; /* No outline */
+}
+
+input::placeholder {
+    color: #6f6f6f;
+}
+
+/* Specific width for select element to match other inputs */
+.detail-item select {
+    width: calc(107% - 160px); /* Adjust width based on the container */
+    padding: 12px;
+    font-weight: 700;
+    border: 1px solid rgba(0, 0, 0, 0.5); /* Semi-transparent border */
+    background-color: transparent; /* Transparent background */
+    color: #6f6f6f; /* Text color */
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5); /* Inner shadow */
+    appearance: none; /* Removes the default browser arrow */
+}
+
+/* Adjust select options width */
+.detail-item select option {
+    background-color: #e0e0e0; 
+    color: #080606; 
+    font-weight: 600;
+}
+
+/* Button Styles */
+.button-container {
+    display: flex; /* Flexbox to align buttons in one row */
+    justify-content: center; /* Center-align buttons */
+    gap: 10px; /* Space between buttons */
+    margin-top: 20px;
+}
+
+.btn-save-changes, .btn-return-home {
+    width: 130px;
+    padding: 12px 0px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.btn-save-changes {
+    background-color: rgb(23, 167, 23);
+    color: rgb(219, 219, 219);
+    font-weight: 600;
+}
+
+.btn-return-home {
+    background-color: #942908;
+    color: rgb(219, 219, 219);
+    font-weight: 550;
+}
+
+.btn-save-changes:hover {
+    background-color: rgb(21, 120, 21);
+}
+
+.btn-return-home:hover {
+    background-color: #822509;
+}

@@ -1,0 +1,829 @@
+
+/* navbar section */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+   
+}
+
+/* Navbar */
+.navbar {
+    height: 60px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 50px;
+    box-shadow: 0 5px 4px rgba(1, 0, 0, 0.1);
+}
+
+
+  
+
+.navbar  a.logo{
+    
+    transition: transform 0.3s ;
+    
+}
+.navbar  a.logo :hover{
+    transform: scale(1.1);
+    /* transform: scale(0.95); */
+}
+.navbar  .location-div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #686b78;
+    cursor: pointer;
+}
+
+.navbar  .location-div .other {
+    font-size: 12px;
+}
+
+.navbar  .location-div .location {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.navbar  .location-div .arrow-down {
+    font-size: 14px;
+}
+
+.navbar  .nav-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #686b78;
+    cursor: pointer;
+}
+
+.navbar  .nav-item svg {
+    color: black;
+    height: 20px;
+    width: 20px;
+}
+
+.navbar  .nav-item span {
+    font-size: 14px;
+    font-weight: 600;
+}
+.adress, .adress1 {
+  width: 100%; /* Adjust width as necessary */
+            
+  white-space: nowrap;   /* Prevent text from wrapping */
+  overflow: hidden;      /* Hide overflow content */
+  text-overflow:ellipsis; /* Add ellipsis (...) for overflowed text */
+  display:block;        /*Ensure it takes full width */
+}
+
+/* Hover Effects */
+.navbar  .nav-item:hover,
+.navbar  .location-div:hover {
+    color: #fc8019;
+}
+
+.navbar  .location-div:hover svg {
+    fill: #fc8019;
+}
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #f1f1f1;
+  padding: 5px 10px;
+  border-radius: 5px;
+  width: 300px;
+}
+
+.search-bar input {
+  border: none;
+  background: none;
+  outline: none;
+  width: 100%;
+}
+
+.search-bar svg {
+  height: 20px;
+  width: 20px;
+  color: #686b78;
+}
+
+.search-bar svg:hover {
+  color: #fc8019;
+}
+
+#signInDropdown {
+  display: none;
+  /* position: -webkit-sticky; */
+  position:absolute;
+  
+  background-color: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  top: 60px;
+  min-width: 160px;
+}
+
+#signInDropdown p {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+}
+
+#signInDropdown p:hover {
+  background-color: #f1f1f1;
+}
+
+@media (max-width: 768px) {
+            .navbar {
+                padding: 10px;
+            }
+
+            .navbar a.logo img {
+                width: 30px;
+                height: 32px;
+            }
+
+            .navbar .nav-item span,
+            .navbar .location-div .location {
+                font-size: 12px;
+            }
+
+            .navbar .nav-item svg,
+            .navbar .location-div .arrow-down {
+                height: 18px;
+                width: 18px;
+            }
+
+            #signInDropdown {
+                right: 10px;
+                top: 50px;
+            }
+        }
+
+/* content Section */
+
+
+
+
+
+  .container-wrapper {
+    padding: 30px 10px;
+    width: 90%;
+    margin: 0 auto;
+    box-shadow: 0 5px 4px rgba(1, 0, 0, 0.1);
+  }
+  
+  .container ,.container1{
+    margin-top: 0px;
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    
+  }
+  
+  .container::-webkit-scrollbar , .container1::-webkit-scrollbar{
+    display: none;
+  }
+  
+  .item {
+    flex: 0 0 auto;
+    text-align: center;
+    width: 200px;
+    margin:10px auto;
+  }
+  
+  .item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s;
+  }
+  
+  .item img:hover {
+    transform: scale(1.05);
+  }
+
+
+
+h1 {
+    text-align: left;
+    margin-bottom: 0px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.scroll-buttons ,.scroll-buttons1{
+    display: flex;
+    justify-content: end;
+    margin-bottom: 10px;
+}
+
+.scroll-buttons button ,.scroll-buttons1 button{
+    background-color: #eaedea;
+    color: rgb(57, 55, 55);
+    border: none;
+    /* padding: 13px; */
+    width: 34px;
+    height: 34px;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+.scroll-buttons button:hover, .scroll-buttons1 button:hover {
+    background-color: #d1d1d1;
+    color: #fff;
+} 
+
+
+
+.card {
+    background-color: #fffdfd;
+    border-radius: 8px;
+    margin:auto 10px;
+    
+    overflow: hidden;
+    transition: transform 0.3s;
+    /* rgba(0, 255, 0, 0.7) */
+}
+
+.card:hover {
+    transform: scale(0.95);
+    box-shadow: 0 4px 8px rgb(202, 202, 202), 
+                0 -4px 8px rgb(202, 202, 202), 
+                4px 0 8px rgb(202, 202, 202), 
+                -4px 0 8px rgb(202, 202, 202);
+}
+
+.image-container {
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+.details h3 {
+    display: flex;
+    margin-top: 13px;
+    font-size: 18px; /* Adjust font size if needed */
+    padding: 1px 5px;
+    width: 100%;           /* Set a width for the element */
+    white-space: nowrap;    /* Prevent text from wrapping */
+    overflow: hidden;       /* Hide any overflow content */
+    text-overflow: ellipsis; /* Add ellipsis (...) to indicate text overflow */
+    display: block;
+}
+
+.details .rating {
+	           
+    display: flex;
+    /* display:inline; */
+    display: inline-flex;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 0px;
+    font-size: 14px;
+    font-weight: bold; /* Adjusted to use 'bold' */
+}
+
+.details .rating svg {
+    margin-right: 5px;
+}
+
+.details .adress,
+.details .adress1 {
+    font-size: 14px; /* Adjust font size if needed */
+    padding: 1px 2px;
+    width: 100%;           /* Set a width for the element */
+    white-space: nowrap;    /* Prevent text from wrapping */
+    overflow: hidden;       /* Hide any overflow content */
+    text-overflow: ellipsis; /* Add ellipsis (...) to indicate text overflow */
+    display: block;
+}
+
+/* restaurants */
+.restaurants{
+    display: flex;
+    flex:1fr 1fr 1fr 1fr 1fr;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* Footer Section */
+footer {
+    background-color: #111;
+    color: #fff;
+    padding: 40px 0;
+  }
+  
+  footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  footer .container div {
+    flex: 1;
+    min-width: 150px;
+    margin: 20px 0;
+  }
+  
+  footer .container div h3 {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  footer .container div ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  footer .container div ul li {
+    margin-bottom: 10px;
+  }
+  
+  footer .container div ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  footer .container div ul li a:hover {
+    color: #fff;
+  }
+  
+  footer .logo {
+    text-align: center;
+    flex: 1 100%;
+    margin-bottom: 20px;
+  }
+  
+  footer .logo img {
+    width: 150px;
+  }
+  
+  footer .copy {
+    text-align: center;
+    flex: 1 100%;
+    font-size: 14px;
+    color: #ccc;
+  }
+  
+  @media (max-width: 450px) {
+    footer .container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    footer .container div {
+      margin: 10px 0;
+    }
+  }
+  
+  
+  
+ /*  menu */
+ 
+ 
+ 
+         .container2 {
+            width: 350px;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            padding: 20px;
+            margin: 50px auto;
+        }
+
+        .rating {
+        display: flex;
+        align-items: center;
+        /* position: absolute; */
+        margin-bottom: 10px;
+        }
+
+        .rating .star {
+        margin-right: 5px;
+        }
+
+        .rating .text {
+        font-weight: bold;
+        }
+
+        .cuisine {
+        display: block;
+        margin-bottom: 15px;
+        }
+
+        .delivery {
+        display: flex;
+        align-items: center;
+        }
+
+        .delivery .icon {
+        width: 20px;
+        height: 20px;
+        }
+
+        .delivery .text1 {
+        font-weight: 560;
+        }
+
+        .container2 ,.menu-item{
+            width: 80%;
+            padding:10px 10px;
+            margin: 15px auto;
+            border: none;
+            box-shadow: 0 5px 4px 0 rgba(1,0,0,0.1);
+            
+        }
+
+        h1 ,h2{
+            text-align: center;
+            margin-top:10px;
+            margin-bottom: 20px;
+        }
+        .menu-item {
+            margin-bottom: 10px;
+            display: flex;
+        }
+
+        .menu-item img {
+            width: 100px;
+            height: 150px;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+
+        .menu-item h3 {
+            margin-top: 0;
+        }
+
+        
+
+        .add-to-cart-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .quantity-input1{
+	 max-width: 30px;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-top:6px;
+    /* padding-bottom: 10px; */
+}
+        
+        
+        
+        
+
+       /* Styling for the section containing the menu items */
+.menu {
+    padding: 10px 10px;
+    width: 90%;
+    margin: 0 auto;
+    box-shadow: 0 0 4px rgba(1, 0, 0, 0.1), 0 0 4px rgba(1, 0, 0, 0.1); /* Shadows only on the left and right */
+}
+
+
+/* Heading for the menu section */
+.menu h2 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Grid container for the menu items */
+.container4 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px; /* Increased gap for better spacing between items */
+    padding: 10px 0;
+    
+   
+}
+
+/* Styling for each menu item */
+.menu-item1 {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+    
+}
+
+/* Image within the menu item */
+.menu-item1 img {
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.menu-item1 img:hover {
+    transform: scale(1.05); /* Slightly scale up on hover */
+    
+}
+
+
+/* Center text inside the menu item */
+.menu-item1 div {
+    text-align: center;
+    width: 100%;
+}
+
+/* Styling for the item name */
+.menu-item1 h3 {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    
+    overflow: hidden; /* Hide any text that overflows the container */
+    text-overflow: ellipsis; /* Display '...' at the end of the text if it overflows */
+    white-space: nowrap; /* Prevent text from wrapping to the next line */
+
+}
+
+.menu-item1 p{
+margin:0px;
+overflow: hidden; /* Hide any text that overflows the container */
+    text-overflow: ellipsis; /* Display '...' at the end of the text if it overflows */
+    white-space: nowrap;
+}
+
+/* Styling for price and description */
+
+
+
+/* Container for the quantity input and add-to-cart button */
+.add-to-cart-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+/* Styling for the quantity input */
+.quantity-input {
+    max-width: 60px;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    padding-bottom: 10px;
+}
+
+/* Styling for the add-to-cart button */
+.add-to-cart-btn {
+    background-color: rgb(23, 167, 23);
+    color: white; /* Text color */
+    border: none;
+    margin-top:10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for the add-to-cart button */
+.add-to-cart-btn:hover {
+    background-color: rgb(21, 120, 21);
+}
+
+/* Hover effect for the entire menu item */
+.menu-item1:hover {
+    transform: scale(0.9);
+    box-shadow: 0 4px 8px rgb(202, 202, 202), 
+                0 -4px 8px rgb(202, 202, 202), 
+                4px 0 8px rgb(202, 202, 202), 
+                -4px 0 8px rgb(202, 202, 202);
+    
+}
+
+/* Make sure the form takes up the full space in the grid */
+.menu-item1 form {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.quantity-input1{
+	 max-width: 30px;
+    text-align: center;
+    padding: 5px;
+    
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-top:6px;
+    /* padding-bottom: 10px; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* Restaurant Container Styles */
+.restaurant-container1 {
+    max-width: 600px; /* Increase container width for layout */
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+.restaurant-container1 h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.restaurant-item1 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+}
+
+.restaurant-image {
+    margin-top: 8px;
+    max-width: 200px;
+    max-height: 210px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-right: 20px; /* Space between image and details */
+    
+}
+
+.restaurant-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.restaurant-details {
+    flex: 1; /* Allow details to take up remaining space */
+    display: flex;
+    flex-direction: column;
+}
+
+.restaurant-details h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0px;
+    margin-bottom: 10px;
+    color: #8a2608; /* Swiggy orange color for restaurant names */
+}
+
+.restaurant-details p {
+    font-size: 16px;
+    margin-top: 0%;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+/* Restaurant Buttons */
+.restaurant-buttons {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+    margin-top: 10px;
+}
+
+.modify-btn, .add-menu-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modify-btn {
+    background-color: rgb(23, 167, 23);
+    color: white;
+    font-weight: 600;
+}
+
+.add-menu-btn {
+    background-color: #942908;
+    color: white;
+    font-weight: 600;
+}
+
+.modify-btn:hover {
+    background-color: rgb(21, 120, 21);
+}
+
+.add-menu-btn:hover {
+    background-color: #822509;
+}
+
+
+.restaurant-container1 a{
+    
+    display: block;
+    /* display: flex; */
+    align-items: center;
+    justify-items: center;
+    width: 20px;
+    
+    
+}
+.restaurant-container1 a:hover {
+    background-color: #822509;
+}
+
+/* Center the "Add New Restaurant" button */
+
+.restaurant-container1 a.modify-btn1 {
+    padding: 12px 20px;
+    width: 120px;
+    background-color: #942908;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    align-items: center;
+    margin: 10px auto;
+    font-weight: 500;
+}
+
+.restaurant-container1 a.modify-btn1:hover {
+    background-color: #822509;
+}
